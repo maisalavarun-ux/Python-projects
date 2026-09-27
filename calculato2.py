@@ -1,4 +1,4 @@
-
+ 
 import math
 
 print("Welcome To Calculator")
@@ -6,9 +6,9 @@ print("Welcome To Calculator")
 while True:
 
     x = float(input("Enter Number:"))
-    function = input("Enter the operator (+,-,x,/,%,^,sin,cos,tan,!):")
-   
+    function = input("Enter the operator (+,-,x,/,%,^,sqrt,sin,cos,tan,!):")
 
+   
     if(function == "+"):
         y = float(input("Enter Number:"))
         result = x + y
@@ -28,11 +28,17 @@ while True:
 
     elif(function == "%"):
         y = float(input("Enter Number:"))
-        result = (x / y)*100
+        result = (x / 100)*y
 
     elif(function == "^"):
         y = float(input("Enter Number:"))
         result = x**y
+
+    elif(function == "sqrt"):
+        if(x >= 0):
+            result = math.sqrt(x)
+        else:
+            result = "Cannot find Square Root of Negative Number"
 
     elif(function == "!"):
         if (x >= 0 and x == int(x)):
