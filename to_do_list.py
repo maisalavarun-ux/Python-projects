@@ -12,7 +12,7 @@ def view():
         print("NO Tasks Added or All tasks Completed")
     else:
         for number, task in enumerate(tasks, start =1):
-            print(f"{number}.{task}")
+            print(f"\n{number}.{task}")
 
 def remove():
     view()
